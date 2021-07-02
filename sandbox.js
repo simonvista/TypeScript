@@ -1,8 +1,12 @@
-// const character='mario'
-var character = 'luigi';
-console.log(character);
-var inputs = document.querySelectorAll('input');
-console.log(inputs);
-inputs.forEach(function (input) {
-    console.log(input);
-});
+// TypeScript doesn't allow you to redefine variable type
+// Once type is define, it can't be alerted to another type
+var character = "mario";
+var age = 30;
+var isBlackBelt = false;
+character = "luigi";
+age = 40;
+isBlackBelt = true;
+var circ = function (diam) {
+    return diam * Math.PI;
+};
+console.log(circ(2.5));
