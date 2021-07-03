@@ -1,23 +1,13 @@
-// Create obj by implementing interface
-const me = {
-    name: "shaun",
-    age: 30,
-    say(text) {
-        console.log(text);
-    },
-    spend(amt) {
-        console.log("I spent", amt);
-        return amt;
-    },
-};
-// Claim an obj w/ type of IsPerson
-let someone;
-const greetPerson = (psn) => {
-    console.log("hi", psn.name);
-};
-greetPerson(me);
-console.log(me);
 import { Invoice } from "./classes/Invoice.js";
+import { Payment } from "./classes/Payment.js";
+let doc1;
+let doc2;
+doc1 = new Invoice("joshi", "web work", 2500);
+doc2 = new Payment("mario", "plumbing work", 200);
+let docs = [];
+docs.push(doc1);
+docs.push(doc2);
+console.log(docs);
 const invoice1 = new Invoice("Luigi", "tuition", 121);
 console.log(invoice1.format());
 const invoice2 = new Invoice("Mario", "Mario Website Design", 221);
