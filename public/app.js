@@ -15,3 +15,7 @@ var invoice1 = new Invoice("Luigi", "tuition", 121);
 console.log(invoice1.format());
 var invoice2 = new Invoice("Mario", "Mario Website Design", 221);
 console.log(invoice2.format());
+var invoices = [];
+invoices.push(invoice1);
+invoices.push(invoice2);
+console.log(invoices);
