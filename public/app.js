@@ -1,27 +1,15 @@
-"use strict";
-// class
-var Invoice = /** @class */ (function () {
-    function Invoice(client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-    }
-    Invoice.prototype.format = function () {
-        return this.client + " owes $" + this.amount + " for " + this.details + ", ";
-    };
-    return Invoice;
-}());
-var invoice1 = new Invoice("Luigi", "tuition", 121);
+import { Invoice } from "./classes/Invoice.js";
+const invoice1 = new Invoice("Luigi", "tuition", 121);
 console.log(invoice1.format());
-var invoice2 = new Invoice("Mario", "Mario Website Design", 221);
+const invoice2 = new Invoice("Mario", "Mario Website Design", 221);
 console.log(invoice2.format());
-var invoices = [];
+let invoices = [];
 invoices.push(invoice1);
 invoices.push(invoice2);
 // invoice1.client = "yoshi";
 invoice2.amount = 400;
 console.log(invoice1, invoice2);
 console.log(invoices);
-invoices.forEach(function (invoice) {
+invoices.forEach((invoice) => {
     console.log(invoice.client, invoice.amount);
 });
