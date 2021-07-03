@@ -9,6 +9,7 @@ greet = function () {
 };
 greet();
 var add = function (a, b, c) {
+    if (c === void 0) { c = 2; }
     console.log(a + b);
     console.log(c);
 };
