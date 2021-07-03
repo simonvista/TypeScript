@@ -20,4 +20,5 @@ add(3, 1.2, 1.23);
 var minus = function (a, b) {
     return a - b;
 };
-var res = minus(1, 2.3);
+var res = minus(1, 3);
+console.log(res);

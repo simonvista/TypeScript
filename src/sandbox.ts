@@ -18,4 +18,5 @@ add(3, 1.2, 1.23);
 const minus = (a: number, b: number): number => {
   return a - b;
 };
-let res = minus(1, 2.3);
+let res = minus(1, 3);
+console.log(res);
