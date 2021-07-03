@@ -17,6 +17,12 @@ const me: IsPerson = {
     return amt;
   },
 };
+// Claim an obj w/ type of IsPerson
+let someone: IsPerson;
+const greetPerson = (psn: IsPerson) => {
+  console.log("hi", psn.name);
+};
+greetPerson(me);
 console.log(me);
 
 import { Invoice } from "./classes/Invoice.js";

@@ -10,6 +10,12 @@ const me = {
         return amt;
     },
 };
+// Claim an obj w/ type of IsPerson
+let someone;
+const greetPerson = (psn) => {
+    console.log("hi", psn.name);
+};
+greetPerson(me);
 console.log(me);
 import { Invoice } from "./classes/Invoice.js";
 const invoice1 = new Invoice("Luigi", "tuition", 121);
