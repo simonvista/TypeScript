@@ -17,8 +17,9 @@ console.log(calc(2, 4, "+"));
 console.log(calc(2, 4, "-"));
 
 // fuction signature 3
-let logInfo: (obj: { name: string; age: number }) => void;
-logInfo = (ninja: { name: string; age: number }) => {
+type nameAge = { name: string; age: number };
+let logInfo: (obj: nameAge) => void;
+logInfo = (ninja: nameAge) => {
   console.log(`${ninja.name} is ${ninja.age} years old`);
 };
 let user = { name: "Amy", age: 21 };

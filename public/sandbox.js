@@ -16,7 +16,6 @@ calc = function (n1, n2, act) {
 };
 console.log(calc(2, 4, "+"));
 console.log(calc(2, 4, "-"));
-// fuction signature 3
 var logInfo;
 logInfo = function (ninja) {
     console.log(ninja.name + " is " + ninja.age + " years old");
