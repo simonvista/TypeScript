@@ -1,22 +1,6 @@
-/* let greet = () => {
-  console.log("hi");
-}; 
-greet()*/
-let greet: Function;
-greet = () => {
-  console.log("hi again");
+const logDetail = (id: string | number, item: string) => {
+  console.log(`${item} id: ${id}`);
 };
-greet();
-// function w/o return
-const add = (a: number, b: number, c: number | string = 2): void => {
-  console.log(a + b);
-  console.log(c);
+const greet = (user: { id: string | number; name: string }) => {
+  console.log(`${user.name} id: ${user.id}`);
 };
-add(3, 1.2);
-add(3, 1.2, 1.23);
-// function w/o return
-const minus = (a: number, b: number): number => {
-  return a - b;
-};
-let res = minus(1, 3);
-console.log(res);
