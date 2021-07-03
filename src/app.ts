@@ -19,4 +19,9 @@ console.log(invoice2.format());
 let invoices: Invoice[] = [];
 invoices.push(invoice1);
 invoices.push(invoice2);
+
+invoice1.client = "yoshi";
+invoice2.amount = 400;
+console.log(invoice1, invoice2);
+
 console.log(invoices);
