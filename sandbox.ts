@@ -1,24 +1,23 @@
+// explicit type
+let chars: string;
+let age: number;
+let isLoggedIn: boolean;
 // array
-let names = ["luigi", "mario", "yoshi"];
-names.push("toad"); // only string can be pushed
-names[0] = "dave";
-let nums = [1, 2, 3, 4];
-nums.push(-1);
-nums[0] = -1;
-let mixes = ["ken", 4, "chun-li", -9, true];
-mixes.push("ryu");
-mixes.push(10);
-mixes.push(false);
-mixes[0] = 11;
-// object
-let ninja = {
-  name: "mario",
-  belt: "black",
-  age: 30,
-};
-// once obj is created, we can't add properties
-ninja = {
-  name: "ryu",
-  belt: "white",
-  age: 20,
-};
+let ninjas: string[] = [];
+ninjas.push("ryu");
+// union type -> mixed types
+let mixes: (string | number | boolean)[] = [];
+mixes.push(3.1);
+mixes.push(true);
+mixes.push("ok");
+console.log(mixes);
+let uid: string | number | boolean;
+uid = "12";
+uid = 12;
+uid = true;
+// objects
+let ninja: object;
+ninja = { name: "ruy", age: 30 };
+ninja = [1, "sd", true];
+let x: { name: string; age: number; isBelted: boolean };
+x = { name: "ruy", age: 23, isBelted: false };

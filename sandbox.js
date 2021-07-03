@@ -1,12 +1,14 @@
-// TypeScript doesn't allow you to redefine variable type
-// Once type is define, it can't be alerted to another type
-var character = "mario";
-var age = 30;
-var isBlackBelt = false;
-character = "luigi";
-age = 40;
-isBlackBelt = true;
-var circ = function (diam) {
-    return diam * Math.PI;
-};
-console.log(circ(2.5));
+// explicit type
+var chars;
+var age;
+var isLoggedIn;
+// array
+var ninjas = [];
+ninjas.push("ryu");
+// union type -> mixed types
+var mixes = [];
+mixes.push(3.1);
+mixes.push(true);
+mixes.push("ok");
+console.log(mixes);
+// objects
