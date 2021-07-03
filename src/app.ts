@@ -1,3 +1,24 @@
+// interface
+interface IsPerson {
+  name: string;
+  age: number;
+  say(a: string): void;
+  spend(a: number): number;
+}
+// Create obj by implementing interface
+const me: IsPerson = {
+  name: "shaun",
+  age: 30,
+  say(text: string): void {
+    console.log(text);
+  },
+  spend(amt: number): number {
+    console.log("I spent", amt);
+    return amt;
+  },
+};
+console.log(me);
+
 import { Invoice } from "./classes/Invoice.js";
 const invoice1 = new Invoice("Luigi", "tuition", 121);
 console.log(invoice1.format());

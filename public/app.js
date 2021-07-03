@@ -1,3 +1,16 @@
+// Create obj by implementing interface
+const me = {
+    name: "shaun",
+    age: 30,
+    say(text) {
+        console.log(text);
+    },
+    spend(amt) {
+        console.log("I spent", amt);
+        return amt;
+    },
+};
+console.log(me);
 import { Invoice } from "./classes/Invoice.js";
 const invoice1 = new Invoice("Luigi", "tuition", 121);
 console.log(invoice1.format());
