@@ -1,8 +1,9 @@
 // class
 class Invoice {
-  client: string;
-  details: string;
-  amount: number;
+  // all properties are public by default
+  readonly client: string;
+  private details: string;
+  public amount: number;
   constructor(c: string, d: string, a: number) {
     this.client = c;
     this.details = d;
@@ -20,8 +21,11 @@ let invoices: Invoice[] = [];
 invoices.push(invoice1);
 invoices.push(invoice2);
 
-invoice1.client = "yoshi";
+// invoice1.client = "yoshi";
 invoice2.amount = 400;
 console.log(invoice1, invoice2);
 
 console.log(invoices);
+invoices.forEach((invoice) => {
+  console.log(invoice.client, invoice.amount);
+});
