@@ -1,14 +1,25 @@
 "use strict";
-var logDetail = function (id, item) {
-    console.log(item + " id: " + id);
+// let greet:Function
+// fuction signature 1
+var greet;
+greet = function (name, greeting) {
+    console.log(greeting + " " + name);
 };
-var greet = function (user) {
-    console.log(user.name + " id: " + user.id);
+greet("ruy", "hi");
+// fuction signature 2
+var calc;
+calc = function (n1, n2, act) {
+    if (act === "+")
+        return n1 + n2;
+    else
+        return n1 - n2;
 };
-var greet1 = function (user) {
-    console.log(user.name + " id is: " + user.id);
+console.log(calc(2, 4, "+"));
+console.log(calc(2, 4, "-"));
+// fuction signature 3
+var logInfo;
+logInfo = function (ninja) {
+    console.log(ninja.name + " is " + ninja.age + " years old");
 };
-logDetail(101, "Amy");
-var user = { id: 11, name: "ruy" };
-greet(user);
-greet1(user);
+var user = { name: "Amy", age: 21 };
+logInfo(user);

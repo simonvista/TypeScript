@@ -1,15 +1,25 @@
-type strOrNum = string | number;
-type nameIdObj = { id: strOrNum; name: string };
-const logDetail = (id: strOrNum, item: string) => {
-  console.log(`${item} id: ${id}`);
+// let greet:Function
+
+// fuction signature 1
+let greet: (a: string, b: string) => void;
+greet = (name: string, greeting: string) => {
+  console.log(`${greeting} ${name}`);
 };
-const greet = (user: nameIdObj) => {
-  console.log(`${user.name} id: ${user.id}`);
+greet("ruy", "hi");
+
+// fuction signature 2
+let calc: (a: number, b: number, c: string) => number;
+calc = (n1: number, n2: number, act: string) => {
+  if (act === "+") return n1 + n2;
+  else return n1 - n2;
 };
-const greet1 = (user: nameIdObj) => {
-  console.log(`${user.name} id is: ${user.id}`);
+console.log(calc(2, 4, "+"));
+console.log(calc(2, 4, "-"));
+
+// fuction signature 3
+let logInfo: (obj: { name: string; age: number }) => void;
+logInfo = (ninja: { name: string; age: number }) => {
+  console.log(`${ninja.name} is ${ninja.age} years old`);
 };
-logDetail(101, "Amy");
-let user = { id: 11, name: "ruy" };
-greet(user);
-greet1(user);
+let user = { name: "Amy", age: 21 };
+logInfo(user);
