@@ -1,14 +1,10 @@
-// explicit type
-var chars;
-var age;
-var isLoggedIn;
-// array
-var ninjas = [];
-ninjas.push("ryu");
-// union type -> mixed types
+// dynamic type -> any key word
+var age = 34;
+age = false;
+age = "sd";
+age = { name: "amy", age: 21 };
 var mixes = [];
-mixes.push(3.1);
+mixes.push(12);
+mixes.push("df");
 mixes.push(true);
-mixes.push("ok");
 console.log(mixes);
-// objects
