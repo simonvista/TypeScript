@@ -1,7 +1,5 @@
 "use strict";
-// const anchor: HTMLAnchorElement | null
+// const anchor: HTMLAnchorElement
 var anchor = document.querySelector("a");
 console.log(anchor);
-if (anchor) {
-    console.log(anchor.href);
-}
+console.log(anchor.href);
