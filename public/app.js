@@ -22,22 +22,13 @@ form.addEventListener("submit", (e) => {
     }
     list.render(doc, type.value, "end");
 });
-// Generics -> T is object w/ defined names & types
-const addUID = (obj) => {
-    let uid = Math.floor(Math.random() * 100);
-    return Object.assign(Object.assign({}, obj), { uid });
-};
-let doc1 = addUID({ name: "yoshi", age: 40 });
-console.log(doc1);
-console.log(doc1.age, doc1.name, doc1.uid);
-const doc3 = {
+const doc1 = {
     uid: 1,
-    resourceName: "person",
-    data: { name: "shaun" },
+    resourceType: 3,
+    data: { title: "wind" },
 };
-const doc4 = {
-    uid: 2,
-    resourceName: "list",
-    data: ["shine", "red", "light"],
+const doc2 = {
+    uid: 11,
+    resourceType: 4,
+    data: { name: "yoshi" },
 };
-console.log(doc3, doc4);
