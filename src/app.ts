@@ -26,30 +26,16 @@ form.addEventListener("submit", (e: Event) => {
   }
   list.render(doc, type.value, "end");
 });
-// Enums
-enum ResourceType {
-  BOOK,
-  AUTHOR,
-  FILM,
-  DIRECTOR,
-  PERSON,
-}
-interface Resource<T> {
-  uid: number;
-  // resourceType: number;
-  resourceType: number;
-  data: T;
-}
-const doc1: Resource<object> = {
-  uid: 1,
-  // resourceType: 3,
-  resourceType: ResourceType.BOOK,
-  data: { title: "wind" },
-};
-const doc2: Resource<object> = {
-  uid: 11,
-  // resourceType: 4,
-  resourceType: ResourceType.PERSON,
-  data: { name: "yoshi" },
-};
-console.log(doc1, doc2);
+// Tuple, fixed type for each position once defined
+// array, flexible type for each position once defined
+let arr = ["ryu", 25, true];
+arr[0] = false;
+arr[1] = -1;
+arr = [-1, false, "hi"];
+// tuple, change value not type for each positon once defined
+let tup: [string, number, boolean] = ["ryu", 1, true];
+tup[0] = "ken";
+tup[1] = -1;
+tup[2] = false;
+let stu: [string, number];
+stu = ["chun-li", 23451];
