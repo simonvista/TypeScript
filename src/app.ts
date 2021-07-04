@@ -26,8 +26,8 @@ form.addEventListener("submit", (e: Event) => {
   }
   list.render(doc, type.value, "end");
 });
-// Generics -> T is object
-const addUID = <T extends object>(obj: T) => {
+// Generics -> T is object w/ defined names & types
+const addUID = <T extends { name: string; age: number }>(obj: T) => {
   let uid = Math.floor(Math.random() * 100);
   return { ...obj, uid };
 };
