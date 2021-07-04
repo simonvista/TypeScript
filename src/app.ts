@@ -34,3 +34,6 @@ const addUID = <T>(obj: T) => {
 let doc1 = addUID({ name: "yoshi", age: 40 });
 console.log(doc1);
 console.log(doc1.age, doc1.name, doc1.uid);
+// since string is T
+let doc2 = addUID("hi");
+console.log(doc2);
