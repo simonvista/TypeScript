@@ -22,7 +22,7 @@ form.addEventListener("submit", (e) => {
     }
     list.render(doc, type.value, "end");
 });
-// Generics
+// Generics -> T is object
 const addUID = (obj) => {
     let uid = Math.floor(Math.random() * 100);
     return Object.assign(Object.assign({}, obj), { uid });
@@ -30,6 +30,3 @@ const addUID = (obj) => {
 let doc1 = addUID({ name: "yoshi", age: 40 });
 console.log(doc1);
 console.log(doc1.age, doc1.name, doc1.uid);
-// since string is T
-let doc2 = addUID("hi");
-console.log(doc2);
