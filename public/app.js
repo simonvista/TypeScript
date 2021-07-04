@@ -30,3 +30,14 @@ const addUID = (obj) => {
 let doc1 = addUID({ name: "yoshi", age: 40 });
 console.log(doc1);
 console.log(doc1.age, doc1.name, doc1.uid);
+const doc3 = {
+    uid: 1,
+    resourceName: "person",
+    data: { name: "shaun" },
+};
+const doc4 = {
+    uid: 2,
+    resourceName: "list",
+    data: ["shine", "red", "light"],
+};
+console.log(doc3, doc4);
